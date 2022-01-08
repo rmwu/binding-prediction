@@ -1,0 +1,10 @@
+{
+    "model_type": "bert",
+    "batch_size": 100,
+    "hidden_size": 768,
+    "d_model": 768,
+    "pocket_file": "pdb.json",
+    "tagging_loss_weight": 1,
+    "binding_loss_weight": 0,
+    "metric": "prc_auc"
+}

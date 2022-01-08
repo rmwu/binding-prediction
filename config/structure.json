@@ -1,0 +1,12 @@
+{
+    "model_type": "structure",
+    "batch_size": 50,
+    "hidden_size": 256,
+    "d_model": 256,
+    "attn_type": "mha",
+    "lr": 1e-4,
+    "encoder_depth": 5,
+    "tagging_loss_weight": 0,
+    "binding_loss_weight": 1,
+    "metric": "rmse"
+}

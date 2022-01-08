@@ -14,3 +14,11 @@ For our datasets, we use two sources, as mentioned.
 1) PDBbind (3d protein-ligand complexes with affinity)
 2) BindingDB (protein sequence, ligand, affinity).
 We select subsets of these data and split them via 30% sequence identity (i.e. train/test proteins share at most 30% sequence id). Note that this is significantly harder than random split / higher sequence id splits.
+
+## Code dependencies
+
+As starters, I would recommend installing
+- the latest Pytorch
+- numpy
+- rdkit
+- scikit-learn

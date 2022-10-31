@@ -6,7 +6,6 @@ import chemprop.train
 
 import chemprop.args
 import chemprop.constants
-import chemprop.hyperparameter_optimization
 import chemprop.interpret
 import chemprop.nn_utils
 import chemprop.utils

@@ -5,7 +5,6 @@ import json
 from typing import Dict, Union
 import os
 
-from hyperopt import fmin, hp, tpe
 import numpy as np
 
 from chemprop.args import HyperoptArgs

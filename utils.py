@@ -94,7 +94,9 @@ def compute_metrics(true, pred):
     """
     # metrics depend on task
     as_sequence = type(true[0]) is list
-    if as_sequence:
+    # >>>
+    if True:
+    #if as_sequence:
         f_metrics = {
             "roc_auc": _compute_roc_auc,
             "prc_auc": _compute_prc_auc

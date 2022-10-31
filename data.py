@@ -200,7 +200,7 @@ def get_raw_data(fp, args):
             if item.get("ligand_path") is not None:
                 ligand = _load_sdf(os.path.join(args.pdb_path, item["ligand_path"]))
             else:
-                ligand = item["mol"]
+                ligand = item["smiles"]
             # skip invalid molecules
             if ligand is None:
                 continue

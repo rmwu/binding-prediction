@@ -43,7 +43,8 @@ def train(train_loader, val_loader, model,
 
     # loss functions
     f_loss = {
-        "affinity": nn.MSELoss(),
+        #"affinity": nn.MSELoss(),
+        "affinity": nn.BCELoss(),
         "tagging": nn.BCELoss()
     }
 
@@ -99,7 +100,7 @@ def train(train_loader, val_loader, model,
         avg_train_loss, avg_train_score = train_epoch_end(num_batches,
                 train_loader, model,
                 log_path, fold_dir, writer, args,
-                max_batch=50, split="train")  # adjust based on batch size
+                max_batch=5, split="train")  # adjust based on batch size
         val_loss, avg_val_score = train_epoch_end(num_batches,
                 val_loader, model, log_path, fold_dir, writer, args)
         printt('\nepoch', epoch)
@@ -166,7 +167,8 @@ def evaluate(val_loader, model, writer, args,
         @param (int) max_batch       number of batches to sample
     """
     f_loss = {
-        "affinity": nn.MSELoss(),
+        #"affinity": nn.MSELoss(),
+        "affinity": nn.BCELoss(),
         "tagging": nn.BCELoss()
     }
 

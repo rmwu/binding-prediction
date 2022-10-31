@@ -1,0 +1,12 @@
+{
+    "model_type": "bert",
+    "batch_size": 200,
+    "hidden_size": 768,
+    "d_model": 768,
+    "attn_type": "mha",
+    "lr": 1e-4,
+    "tagging_loss_weight": 0,
+    "binding_loss_weight": 1,
+    "metric": "roc_auc",
+    "checkpoint_path": "/data/rsg/chemistry/rmwu/data/models/binding-predict/bert-data=bindingdb_bindingdb-ep=100"
+}

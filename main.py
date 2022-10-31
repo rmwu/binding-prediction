@@ -69,7 +69,7 @@ class TrainArgs(ChempropArgs): #Tap):
 
     num_folds: int = 5  # number of different seeds / cross-validation folds
     epochs: int = 60  # max epochs to run
-    patience: int = 10  # lack of validation improvement = end
+    patience: int = 5  # lack of validation improvement = end
     warmup_epochs: int = 0  # train non-affinity model first
 
     gpu: int = 0

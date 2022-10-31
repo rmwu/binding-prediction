@@ -71,6 +71,8 @@ class BindingAffinityModel(nn.Module):
         # (default) output single prediction per instance
         if compute_affinity:
             x = self.classifier(self.mlp(x))
+            # >>>
+            x = torch.sigmoid(x)
             x = x.squeeze()
             outputs["affinity"] = x
 

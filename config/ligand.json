@@ -4,5 +4,5 @@
     "tagging_loss_weight": 0,
     "binding_loss_weight": 1,
     "lr": 5e-4,
-    "metric": "rmse"
+    "metric": "roc_auc"
 }

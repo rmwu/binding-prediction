@@ -4,20 +4,26 @@
 NUM_FOLDS=5
 EPOCHS=100
 SEED=0
-CUDA=6
+CUDA=7
 
 ######### data params
 
 # NOTE: change this for different models, e.g. "ligand" "bert" "structure"
-TAG="bert"
+#TAG="bert_finetune"
+TAG="ligand"
 CONFIG="config/${TAG}.json"
 
 # NOTE: customize this to your data path
 DATA="bindingdb"
 ROOT="/data/rsg/chemistry/rmwu/data/processed/binding/${DATA}"
 
+# >>> Tox21 with Hannes
+DATA="tox21"
+ROOT="/data/rsg/chemistry/rmwu/data/processed/binding/${DATA}"
+
 # NOTE: this specifies the dataset name, e.g. pdbbind.csv
-SPLIT="bindingdb"
+#SPLIT="bindingdb"
+SPLIT="ogb"
 LABEL_PATH="${SPLIT}.csv"
 
 # NOTE: you may customize the save directory's name here
@@ -25,7 +31,7 @@ if [ -z "$TAG" ]
 then
     NAME="data=${DATA}_${SPLIT}-ep=${EPOCHS}"
 else
-    NAME="${TAG}-data=${DATA}_${SPLIT}-ep=${EPOCHS}"
+    NAME="${TAG}-data=${DATA}_${SPLIT}-ep=${EPOCHS}-3"
 fi
 
 # NOTE: customize this to your save path

@@ -40,11 +40,11 @@ def load_model(args, model_params, fold):
             printt("no checkpoint found")
 
         # >>> todo
-        print('freezing...')
-        for param in model.sequence_model.parameters():
-            param.requires_grad = False
-        for param in model.mlp2.parameters():
-            param.requires_grad = False
+        #print('freezing...')
+        #for param in model.sequence_model.parameters():
+        #    param.requires_grad = False
+        #for param in model.mlp2.parameters():
+        #    param.requires_grad = False
         # <<<
 
     # move to cuda if applicable
